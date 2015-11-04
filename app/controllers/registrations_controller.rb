@@ -1,5 +1,9 @@
 class RegistrationsController < ApplicationController
 
+	def index
+		render plain: "Hello World"
+	end
+
 	def create
 		@user = User.new(email: params[:email],
 						username: params[:username],
