@@ -18,9 +18,9 @@ delete "/signup", to: "registrations#destroy"
 post "/login", to: "registrations#login"
 post "/destroy", to: "registrations#destroy"
 
-get "/deck", to: "deck#index"
-delete "/deck/destroy/:id", to: "deck#destroy"
-post "/deck/create", to: "deck#create"
+get "/deck", to: "decks#index"
+delete "/deck/destroy/:id", to: "decks#destroy"
+post "/deck/create", to: "decks#create"
 
 get "/deck/:id/cards", to: "cards#index"
 post "/deck/:id/cards", to: "cards#create"
