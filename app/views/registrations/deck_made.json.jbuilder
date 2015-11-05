@@ -1,0 +1,1 @@
+json.extract! @deck, :deck_id, :user_id, :title
