@@ -30,7 +30,7 @@ class RegistrationsController < ApplicationController
 	end
 
 	def destroy
-		@user = User.find_by(email: params[:email])
+		@user = User.find_by(username: params[:username])
 		if @user && @user.authenticate(params[:password])
 			@user.destroy
 			render plain: "User has been deleted"
