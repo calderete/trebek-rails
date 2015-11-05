@@ -19,8 +19,9 @@ class RegistrationsController < ApplicationController
 
 
 	def login
+
 		@user = User.find_by(username: params[:username])
-		if @user && @user.authenticate(params [:password])
+		if @user && @user.authenticate(params[:password])
 			render "login.json.jbuilder", status: :ok
 		else
 			render json: {error: "Could not find user for #{params[:username]} or wrong password." },
@@ -30,8 +31,9 @@ class RegistrationsController < ApplicationController
 
 	def destroy
 		@user = User.find_by(email: params[:email])
-		if @user && @user.authenticate(params [:password])
+		if @user && @user.authenticate(params[:password])
 			@user.destroy
+			render plain: "User has been deleted"
 		else
 			render json: { error: "Invalid email (#{params[:email]}) or password"},
 			status: :unauthorized
