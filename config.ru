@@ -11,7 +11,7 @@ allow do
 	origins '*'
 	resource '*',
 				:headers => :any,
-				:expose  => :['Access=Token', 'expiry', 'token-type', 'uid', 'client']
+				:expose  => ['Access-Token', 'expiry', 'token-type', 'uid', 'client'],
 				:methods => [:get, :post, :delete, :put, :patch, :options, :head]
 
 		end
