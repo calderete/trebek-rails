@@ -18,7 +18,16 @@ delete "/signup", to: "registrations#destroy"
 post "/login", to: "registrations#login"
 post "/destroy", to: "registrations#destroy"
 
-post "/make_deck", to: "deck#create"
+get "/deck", to: "deck#index"
+delete "/deck/destroy/:id", to: "deck#destroy"
+post "/deck/create", to: "deck#create"
+
+get "/deck/:id/cards", to: "cards#index"
+post "/deck/:id/cards", to: "cards#create"
+delete "/deck/id/cards", to: "cards#destroy"
+
+
+
   # Example resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
 
