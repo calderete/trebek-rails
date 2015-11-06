@@ -24,7 +24,11 @@ post "/deck/create", to: "decks#create"
 
 get "/deck/:id/cards", to: "cards#index"
 post "/deck/:id/cards", to: "cards#create"
-delete "/deck/id/cards", to: "cards#destroy"
+delete "/deck/:id/cards", to: "cards#destroy"
+
+get "/guesses", to: "guesses#index"
+post "guesses/create", to: "guesses#create"
+
 
 
 
