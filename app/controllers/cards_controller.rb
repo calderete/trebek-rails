@@ -2,14 +2,16 @@ class CardsController < ApplicationController
 
 	def index
 		@deck = Deck.find(params[:id])
-		@deck.cards.create(params[:id])
+		@cards = @deck.cards.all
+		
 		render "cards.json.jbuilder"
 	end
 
 	def create
 
 
-		@card = decks.cards.new(question: params[:question],
+		@deck = Deck.find(params[:id])
+		@card = @deck.cards.new(question: params[:question],
 											  answer: params[:answer],
 											  category: params[:category])
 	
