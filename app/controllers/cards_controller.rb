@@ -23,7 +23,20 @@ class CardsController < ApplicationController
 		end
 	end
 
+	def edit
+		@card = Card.find(params[:id])
+		render json: { @card.content}
+	end
+
+
+
 	def destroy
 		@card = Card.find_by(card_id: params[:card_id])
 	end
 end
+
+
+
+
+
+

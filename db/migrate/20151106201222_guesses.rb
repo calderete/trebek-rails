@@ -5,6 +5,7 @@ class Guesses < ActiveRecord::Migration
   		t.integer :score
   		t.integer :user_id
   		t.integer :card_id
-
+  	end
   end
 end
+
