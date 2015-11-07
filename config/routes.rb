@@ -18,13 +18,20 @@ delete "/signup", to: "registrations#destroy"
 post "/login", to: "registrations#login"
 post "/destroy", to: "registrations#destroy"
 
-get "/deck", to: "deck#index"
-delete "/deck/destroy/:id", to: "deck#destroy"
-post "/deck/create", to: "deck#create"
+get "/deck", to: "decks#index"
+delete "/deck/destroy/:id", to: "decks#destroy"
+post "/deck/create", to: "decks#create"
 
 get "/deck/:id/cards", to: "cards#index"
 post "/deck/:id/cards", to: "cards#create"
-delete "/deck/id/cards", to: "cards#destroy"
+delete "/deck/:id/cards", to: "cards#destroy"
+
+get "/guesses", to: "guesses#index"
+post "guesses/create", to: "guesses#create"
+
+get "/card/:id/edit", to: "cards#edit"
+post "/card/:id/edit", to: "cards#update"
+
 
 
 

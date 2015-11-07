@@ -1,0 +1,1 @@
+json.extract! @card, :question, :answer, :category, :deck_id
