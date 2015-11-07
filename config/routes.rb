@@ -29,6 +29,9 @@ delete "/deck/:id/cards", to: "cards#destroy"
 get "/guesses", to: "guesses#index"
 post "guesses/create", to: "guesses#create"
 
+get "/card/:id/edit", to: "cards#edit"
+post "/card/:id/edit", to: "cards#update"
+
 
 
 
