@@ -27,7 +27,6 @@ ActiveRecord::Schema.define(version: 20151106201222) do
 
   create_table "decks", force: :cascade do |t|
     t.string   "title",      null: false
-    t.string   "category"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer  "user_id"
