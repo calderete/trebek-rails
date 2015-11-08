@@ -10,7 +10,7 @@ class GuessesController < ApplicationController
 		@card = Card.find(params[:id])
 		@guess = current_user.guesses.new(time: params[:time],
 								  		  score: params[:score],
-								  		  card_id: params[:card_id])
+								  		  card_id: params[:id])
 
 		if @guess.save
 
