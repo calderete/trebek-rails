@@ -21,4 +21,7 @@ class DecksController < ApplicationController
 	def destroy
 		@deck = Deck.find_by(deck_id: params[:deck_id])
 	end
+
+
+
 end
