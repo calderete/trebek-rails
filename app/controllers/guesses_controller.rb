@@ -3,12 +3,14 @@ class GuessesController < ApplicationController
 	def index
 		@card = Card.find(params[:id])
 		@guesses = @card.guesses.all
+		render "guess.json.jbuilder"
 	end
 
 	def create
 		@card = Card.find(params[:id])
-		@guess = @card.guesses.new(time: params[:time],
-								   score: params[:score])
+		@guess = current_user.guesses.new(time: params[:time],
+								  		  score: params[:score],
+								  		  card_id: params[:card_id])
 
 		if @guess.save
 

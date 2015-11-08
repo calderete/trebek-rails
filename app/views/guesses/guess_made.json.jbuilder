@@ -1,1 +1,1 @@
-json.extract! @guess, :id, :user_id, :deck_id, :score, :time
+json.extract! @guess, :id, :user_id, :card_id, :score, :time
