@@ -46,8 +46,8 @@ post "/card/:id/edit", to: "cards#update"
   #       get 'sold'
   #     end
   #   end
-post "/up_vote", to: "votes#up_vote"
-post "/down_vote", to: "votes#down_vote"
+post "/up_vote/:deck_id", to: "votes#up_vote"
+post "/down_vote/:deck_id", to: "votes#down_vote"
   #   resources :products do
   #     resources :comments, :sales
   #     resource :seller

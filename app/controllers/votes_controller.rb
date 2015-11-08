@@ -1,16 +1,17 @@
 class VotesController < ApplicationController
 
-	def initialize
-		@user = current_user
-		@deck = Deck.find(params[:deck_id])
-	end
+	
 
 	def up_vote
+		@user = current_user
+		@deck = Deck.find(params[:deck_id])
 		@deck.liked_by @user
 		index
 	end
 
 	def down_vote
+		@user = current_user
+		@deck = Deck.find(params[:deck_id])
 		@deck.disliked_by @user
 		index
 	end
