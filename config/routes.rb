@@ -32,9 +32,6 @@ post "guesses/create", to: "guesses#create"
 get "/card/:id/edit", to: "cards#edit"
 post "/card/:id/edit", to: "cards#update"
 
-
-
-
   # Example resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
 
@@ -49,7 +46,7 @@ post "/card/:id/edit", to: "cards#update"
   #       get 'sold'
   #     end
   #   end
-
+post "/up_vote", to: "votes#up_vote"
   # Example resource route with sub-resources:
   #   resources :products do
   #     resources :comments, :sales

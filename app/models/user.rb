@@ -1,11 +1,12 @@
 class User < ActiveRecord::Base
 	has_many :decks
 	has_many :guesses
+	acts_as_voter
+	has_secure_password
+	before_validation :ensure_access_token!
 	
 
 
-	has_secure_password
-	before_validation :ensure_access_token!
 
 	validates_presence_of :username, :password 
 	validates_uniqueness_of :username
