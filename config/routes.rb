@@ -47,7 +47,7 @@ post "/card/:id/edit", to: "cards#update"
   #     end
   #   end
 post "/up_vote", to: "votes#up_vote"
-  # Example resource route with sub-resources:
+post "/down_vote", to: "votes#down_vote"
   #   resources :products do
   #     resources :comments, :sales
   #     resource :seller
