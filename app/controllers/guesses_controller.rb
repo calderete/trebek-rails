@@ -17,6 +17,8 @@ class GuessesController < ApplicationController
 			render "guess_made.json.jbuilder", status: :created
 		else 
 			render json: {error: "Could not create Guess"}
+		end
+	
 	end
-end
+
 end
