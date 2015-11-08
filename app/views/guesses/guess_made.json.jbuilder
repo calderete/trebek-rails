@@ -1,0 +1,1 @@
+json.extract! @guess, :id, :user_id, :deck_id, :score, :time
